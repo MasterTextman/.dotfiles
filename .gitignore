@@ -4,4 +4,3 @@ githelp
 .mpdscribble/mpdscribble.log
 mpd/log
 mpd/state
-scripts/startupscript.sh
