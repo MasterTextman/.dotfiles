@@ -16,3 +16,5 @@ scrottake.sh						: a script that allows taking a screenshot of a specific area.
 									  screenshot command in the i3 config doesn't look as complicated.
 
 sshkeygen.sh						: generates an ssh key, and stores it in ~/.ssh/
+
+dotfileinstall.sh					: installs all of the dotfiles using GNU Stow
