@@ -1,6 +1,9 @@
 githelp
-.calcurse/daemon.log
-.calcurse/todo
-.mpdscribble/mpdscribble.log
-mpd/log
-mpd/state
+calcurse/.calcurse/daemon.log
+calcurse/.calcurse/todo
+calcurse/.calcurse/apts
+mpdscribble/.mpdscribble/mpdscribble.log
+mpd/.config/mpd/log
+mpd/.config/mpd/mpd.log
+mpd/.config/mpd/database
+mpd/.confid/mpd/playlists
