@@ -13,8 +13,8 @@ rofi.show: combi,run
 rofi.combi-modi:window,drun
 rofi.font: Terminess Powerline 9
 
-urxvt*font: xft:Terminess Powerline:pixelsize=9
-urxvt*boldFont: xft:Terminess Powerline:bold:pixelsize=9
+urxvt*font: xft:Terminess Powerline:pixelsize=10
+urxvt*boldFont: xft:Terminess Powerline:bold:pixelsize=10
 urxvt*scrollBar: false
 urxvt*borderless: 1
 urxvt*externalBorder: 0
@@ -24,4 +24,6 @@ URxvt*geometry: 200x30
 ! Due to i3
 URxvt.transparent: true
 URxvt.shading:15
+
+xterm*termName: xterm-256color
 
