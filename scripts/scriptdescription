@@ -15,3 +15,4 @@ alldirectoryconversion-FLAC2MP3.sh	: one step up from conversiontomp3 - every di
 scrottake.sh						: a script that allows taking a screenshot of a specific area. used so that the
 									  screenshot command in the i3 config doesn't look as complicated.
 
+sshkeygen.sh						: generates an ssh key, and stores it in ~/.ssh/
