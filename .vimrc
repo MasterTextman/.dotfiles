@@ -5,7 +5,8 @@ syntax enable " enables syntax processing
 
 "ALL SET COMMANDS"
 "colorscheme redblack
-colorscheme wal
+"colorscheme wal
+colorscheme desert256v2
 let g:filetype_pl="prolog"
 set foldnestmax=10 " guards against doing too much fold nesting
 set tabstop=4 " tab is 4 spaces
@@ -32,6 +33,15 @@ nnoremap <leader><space> :nohlsearch<CR>
 "For automatic fold saving/loading
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
+
+"VIM-PLUG"
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
+"OTHER"
+let g:airline_powerline_fonts = 1
+set t_Co=256
 
 "This is all for now, as I am a beginner.
 "To see the rest, more advanced stuff, check this:
