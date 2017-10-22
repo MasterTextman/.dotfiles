@@ -24,3 +24,4 @@ alias stepmania='cd Downloads/StepMania-5.0.12-Linux/stepmania-5.0/ && ./stepman
 alias browser='sudo nautilus . & disown'
 alias windowsdir='cd /media/textman/Windows7_OS/Games/'
 alias truekill='kill -9'
+alias addalias='vim .bash_aliases'
