@@ -1,1 +1,7 @@
 githelp
+.calcurse/daemon.log
+.calcurse/todo
+.mpdscribble/mpdscribble.log
+mpd/log
+mpd/state
+scripts/startupscript.sh
