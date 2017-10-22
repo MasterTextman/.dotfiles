@@ -6,4 +6,5 @@ mpdscribble/.mpdscribble/mpdscribble.log
 mpd/.config/mpd/log
 mpd/.config/mpd/mpd.log
 mpd/.config/mpd/database
-mpd/.confid/mpd/playlists
+mpd/.config/mpd/playlists
+mpd/.config/mpd/state
