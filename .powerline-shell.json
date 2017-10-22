@@ -1,0 +1,13 @@
+{
+  "segments": [
+	"uptime",
+    "virtual_env", 
+    "username", 
+    "cwd", 
+    "git", 
+    "hg", 
+    "jobs", 
+    "root"
+  ],
+  "theme": "solarized_dark"
+}
