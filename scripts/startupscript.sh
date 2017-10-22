@@ -1,5 +1,5 @@
 #!/bin/sh
-wal -i "bgs/skyview.jpg" 
+wal -R 
 walcolors.sh
 mpdscribble
 polyboot
