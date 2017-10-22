@@ -13,8 +13,8 @@ rofi.show: combi,run
 rofi.combi-modi:window,drun
 rofi.font: Terminess Powerline 9
 
-urxvt*font: xft:Terminus:pixelsize=9
-urxvt*boldFont: xft:Terminus:bold:pixelsize=9
+urxvt*font: xft:Terminess Powerline:pixelsize=9
+urxvt*boldFont: xft:Terminess Powerline:bold:pixelsize=9
 urxvt*scrollBar: false
 urxvt*borderless: 1
 urxvt*externalBorder: 0
