@@ -6,7 +6,7 @@ syntax enable " enables syntax processing
 "ALL SET COMMANDS"
 "colorscheme redblack
 "colorscheme wal
-colorscheme desert256v2
+colorscheme molokai
 let g:filetype_pl="prolog"
 set foldnestmax=10 " guards against doing too much fold nesting
 set tabstop=4 " tab is 4 spaces
@@ -37,10 +37,13 @@ au BufWinEnter * silent loadview
 "VIM-PLUG"
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "OTHER"
 let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
+let g:rehash256 = 1
 set t_Co=256
 
 "This is all for now, as I am a beginner.
