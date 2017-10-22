@@ -1,0 +1,17 @@
+walcolors.sh						: sets the colors of rofi [along with some attributes] according to pywal
+
+startupscript.sh					: executed at startup - add programs to be ran in startup in here
+
+musicplayer.sh						: launches ncmpcpp in the way that I like it right from the start
+
+lion.sh								: opens CLion for easy access
+
+conversiontomp3.sh					: converts all files in the directory from FLAC to MP3
+
+alldirectoryconversion-FLAC2MP3.sh	: one step up from conversiontomp3 - every directory within the place you're in has
+									  their contents converted from FLAC to mp3. non-FLAC files are untouched, so don't
+									  worry about that.
+
+scrottake.sh						: a script that allows taking a screenshot of a specific area. used so that the
+									  screenshot command in the i3 config doesn't look as complicated.
+

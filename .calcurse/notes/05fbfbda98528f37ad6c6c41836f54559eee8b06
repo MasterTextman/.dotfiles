@@ -1,0 +1,7 @@
+Since I am now using urxvt, powerline-shell is just too buggy to actually use.
+As a result, I have edited the $PS1 of the bash, and am now using that as a result.
+
+Plus, "wal" wasn't working well with it. The text kept being too similarly-coloured to be visible.
+I'd rather have an edited $PS1 with wal than powerline unfortunately.
+
+That is all.

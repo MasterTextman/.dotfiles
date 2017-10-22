@@ -1,0 +1,15 @@
+TAKE NOTE:
+
+The startupscript.sh might not be running at startup.
+These are the programs that should be started.
+	- mpdscribble
+	- wal [with skyview background]
+	- polyboot
+	- mpd
+	- walcolors.sh
+	- i3 bar should be killed
+
+When run seperately, it works perfectly. No bugs are within the script itself.
+
+[2017/10/20 10:28]
+Running seperately isn't too big an issue.

@@ -1,0 +1,11 @@
+TAKE NOTE:
+
+The startupscript.sh might not be running at startup.
+These are the programs that should be started.
+	- mpdscribble
+	- wal [with skyview background]
+	- polyboot
+	- mpd
+	- walcolors.sh
+
+When run seperately, it works perfectly. No bugs are within the script itself.

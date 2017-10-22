@@ -1,0 +1,4 @@
+Buggy, doesn't work well. Tried installing, after being on i3 it's not really that worth it honestly.
+
+UPDATE -- OCT 18 2017, 13:23
+Reinstalled and gave it another shot. Figured out the pywal script was overriding the config, so I modified that, and voila.It works beautifully.
