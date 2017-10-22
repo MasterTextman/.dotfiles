@@ -19,14 +19,16 @@ urxvt*scrollBar: false
 urxvt*borderless: 1
 urxvt*externalBorder: 0
 urxvt*internalBorder: 0
-URxvt*fading: 30
-URxvt*geometry: 200x30
-URxvt*letterSpace: 0
+urxvt*fading: 30
+urxvt*geometry: 200x30
+urxvt*letterSpace: 0
 
 ! Due to i3
 ! Letting compton handle transparency
-! URxvt.transparent: true
-! URxvt.shading:15
+urxvt.transparent: true
+urxvt.shading:7
+
+
 
 xterm*termName: xterm-256color
 
