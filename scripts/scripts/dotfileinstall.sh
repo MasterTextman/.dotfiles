@@ -7,7 +7,6 @@ stow dunst && echo installed dunst config
 stow fonts && echo installed fonts config
 stow i3 && echo installed i3 config
 stow mpd && echo installed mpd config
-stow mpdscribble && echo installed mpdscribble config
 stow ncmpcpp && echo installed ncmpcpp config
 stow polybar && echo installed polybar config
 stow powerline-shell && echo installed powerline-shell config
