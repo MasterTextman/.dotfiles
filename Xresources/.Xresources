@@ -26,7 +26,7 @@ urxvt*letterSpace: 0
 ! Due to i3
 ! Letting compton handle transparency
 urxvt.transparent: true
-urxvt.shading:7
+urxvt.shading:15
 
 
 
