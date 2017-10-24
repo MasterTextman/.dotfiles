@@ -16,4 +16,5 @@ stow neofetch && echo installed neofetch config
 stow Xresources && echo installed Xresources
 stow fonts && echo installed fonts
 stow scripts && echo installed scripts
+stow backgrounds && echo downloaded wallpapers
 echo Done!
