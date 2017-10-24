@@ -29,7 +29,7 @@ print_info() {
     info "Memory" memory
 
     # info "CPU Usage" cpu_usage
-    # info "Disk" disk
+     info "Disk" disk
     # info "Battery" battery
     # info "Font" font
     # info "Song" song
@@ -148,7 +148,7 @@ speed_type="bios_limit"
 # Example:
 # on:    'i7-6500U (4) @ 3.1GHz'
 # off:   'i7-6500U (4) @ 3.100GHz'
-speed_shorthand="off"
+speed_shorthand="on"
 
 # Shorten the output of the CPU function
 #
@@ -162,7 +162,7 @@ speed_shorthand="off"
 # tiny:  'i7-6500U (4)'
 # name:  'Intel i7-6500U (4)'
 # speed: '3.1GHz'
-cpu_shorthand="off"
+cpu_shorthand="on"
 
 # CPU Speed
 # Hide/Show CPU speed.
@@ -252,7 +252,7 @@ gpu_type="all"
 # Example:
 # on:  '1920x1080 @ 60Hz'
 # off: '1920x1080'
-refresh_rate="off"
+refresh_rate="on"
 
 
 # Gtk Theme / Icons / Font
