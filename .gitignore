@@ -2,10 +2,12 @@ githelp
 calcurse/.calcurse/daemon.log
 calcurse/.calcurse/todo
 calcurse/.calcurse/apts
+calcurse/.calcurse/.daemon.pid
 mpdscribble/.mpdscribble/mpdscribble.log
 mpd/.config/mpd/log
 mpd/.config/mpd/mpd.log
 mpd/.config/mpd/database
 mpd/.config/mpd/playlists
 mpd/.config/mpd/state
+mpd/.config/mpd/pid
 mpdscribble/
