@@ -119,12 +119,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-(wal -b 1a1a1a -r -t &)
+(wal -r -t &)
 
 export PATH=$PATH:~/scripts
 
 function _update_ps1() {
-    PS1="$(powerline-shell)"
+    PS1="$(powerline-shell $?)"
 }
 
 if [ "$TERM" != "linux" ]; then

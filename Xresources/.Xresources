@@ -26,5 +26,5 @@ urxvt*fading: 10
 urxvt.transparent: false
 urxvt.shading:0
 
-!xterm*termName: xterm-256color
+xterm*termName: xterm-256color
 
