@@ -58,24 +58,18 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-reset=$(tput sgr0)
-bold=$(tput bold)
-    PS1="[\[$bold\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$reset\]]\$ "
+    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
 else
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
     #Default setting
-reset=$(tput sgr0)
-bold=$(tput bold)
-    PS1="[\[$bold\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$reset\]]\$ "
+    #PS1="[\]${debian_chroot:+($debian_chroot)}"
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-reset=$(tput sgr0)
 bold=$(tput bold)
-    PS1="[\[$bold\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$reset\]]\$ "
     ;;
 *)
     ;;
@@ -125,12 +119,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-(wal -r -t &)
+(wal -b 1a1a1a -r -t &)
 
 export PATH=$PATH:~/scripts
 
 function _update_ps1() {
-    PS1="$(powerline-shell $?)"
+    PS1="$(powerline-shell)"
 }
 
 if [ "$TERM" != "linux" ]; then
