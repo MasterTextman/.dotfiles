@@ -54,6 +54,9 @@ bindsym XF86AudioPlay exec --no-startup-id "mpc toggle"
 bindsym XF86AudioPrev exec --no-startup-id "mpc prev"
 bindsym XF86AudioStop exec --no-startup-id "mpc stop"
 
+#lockscreen control
+bindsym XF86ScreenSaver exec --no-startup-id "i3lock -i \\"bgs/702seconds.png\\" -e -f"
+
 #volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
