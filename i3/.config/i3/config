@@ -55,6 +55,7 @@ bindsym XF86AudioPrev exec --no-startup-id "mpc prev"
 bindsym XF86AudioStop exec --no-startup-id "mpc stop"
 
 #lockscreen control
+#bindsym XF86Sleep exec --no-startup-id "i3lock -i \\"bgs/702seconds.png\\" -e -f && suspend"
 bindsym XF86ScreenSaver exec --no-startup-id "i3lock -i \\"bgs/702seconds.png\\" -e -f"
 
 #volume controls
