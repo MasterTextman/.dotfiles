@@ -231,3 +231,4 @@ new_window pixel 0
 #bar {
 #        status_command i3status
 #}
+vim:filetype=i3
