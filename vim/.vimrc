@@ -38,6 +38,15 @@ au BufWinEnter * silent loadview
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mkitt/tabline.vim'
+Plug 'vim-syntastic/syntastic'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 call plug#end()
 
 "OTHER"
@@ -45,6 +54,17 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 let g:rehash256 = 1
 set t_Co=256
+
+set tabpagemax=100
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:deoplete#enable_at_startup = 1
 
 "This is all for now, as I am a beginner.
 "To see the rest, more advanced stuff, check this:
