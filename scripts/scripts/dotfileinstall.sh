@@ -12,6 +12,7 @@ stow polybar && echo installed polybar config
 stow powerline-shell && echo installed powerline-shell config
 stow tmux && echo installed tmux config
 stow vim && echo installed vim config
+stow nvim && echo downloaded nvim config
 stow neofetch && echo installed neofetch config
 stow Xresources && echo installed Xresources
 stow fonts && echo installed fonts
