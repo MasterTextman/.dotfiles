@@ -12,14 +12,16 @@ set background=dark
 let g:filetype_pl="prolog"
 set foldnestmax=10 " guards against doing too much fold nesting
 set tabstop=4 " tab is 4 spaces
-set softtabstop=0 " while editing, tab counts as 4 spaces
+set softtabstop=4 " while editing, tab counts as 4 spaces
 set shiftwidth=4
+set expandtab
 set number " adds line numbers
 set cursorline " [doesnt] highlights the line of the cursor
 set wildmenu " adds a menu while cycling through commands
 set lazyredraw " redraw only when needed - leading to faster macros
 set incsearch " search as characters are entered
 set hlsearch " highlight the matches
+set number relativenumber
 
 "ALL KEY REMAPPINGS"
 "COMMENTED DUE TO ME BEING A BEGINNER
@@ -56,7 +58,7 @@ else
 endif
 Plug 'scrooloose/nerdtree'
 Plug 'kien/rainbow_parentheses.vim'
-"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Raimondi/delimitMate'
 Plug 'easymotion/vim-easymotion'
 Plug 'sheerun/vim-polyglot'
@@ -84,8 +86,8 @@ let g:rbpt_loadcmd_toggle = 0
 let g:delimitMateAutoClose = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_expand_cr = 1
-"let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
@@ -95,6 +97,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+set clipboard+=unnamedplus
 
 "This is all for now, as I am a beginner.
 "To see the rest, more advanced stuff, check this:
