@@ -18,3 +18,9 @@ scrottake.sh						: a script that allows taking a screenshot of a specific area.
 sshkeygen.sh						: generates an ssh key, and stores it in ~/.ssh/
 
 dotfileinstall.sh					: installs all of the dotfiles using GNU Stow
+
+setvim-defaulteditor.sh             : sets neovim as the default text editor
+
+wal.sh                              : replacement for having to repeat "wal -b "#1a1a1a" -i" everytime. meaning running
+                                      "wal.sh image.jpeg" sets the background to image.jpeg, while also setting the 
+                                      background of the terminal itself to 1a1a1a which is a grey colour.

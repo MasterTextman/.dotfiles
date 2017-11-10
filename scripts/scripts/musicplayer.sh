@@ -1,6 +1,7 @@
 #!/bin/sh
 
 printf '\033[8;29;252t'
+killall ncmpcpp
 tmux new-session -d -x 252 -y 29
 
 tmux select-layout even-horizontal
