@@ -37,6 +37,9 @@ map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+tnoremap <Esc> <C-\><C-n>
+command! -nargs=* T split | terminal <args>
+command! -nargs=* VT vsplit | terminal <args>
 
 "For automatic fold saving/loading
 au BufWinLeave * mkview
@@ -49,19 +52,22 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mkitt/tabline.vim'
 "Plug 'vim-syntastic/syntastic'
 Plug 'w0rp/ale'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+"if has('nvim')
+""  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+""  Plug 'Shougo/deoplete.nvim'
+""  Plug 'roxma/nvim-yarp'
+""  Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Raimondi/delimitMate'
 Plug 'easymotion/vim-easymotion'
+Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'sheerun/vim-polyglot'
+Plug 'adimit/prolog.vim'
 "Plug 'mhinz/vim-startify'
 call plug#end()
 
@@ -71,15 +77,23 @@ let g:airline_theme='powerlineish'
 let g:rehash256 = 1
 set t_Co=256
 
+"if has('nvim') || has('termguicolors')
+"    set termguicolors
+"endif
+
 set tabpagemax=100
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+let g:ycm_server_python_interpreter = "/usr/bin/python"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:ycm_global_ycm_extra_conf = '/home/textman/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:deoplete#enable_at_startup = 1
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
@@ -101,5 +115,5 @@ set clipboard+=unnamedplus
 
 "This is all for now, as I am a beginner.
 "To see the rest, more advanced stuff, check this:
-	"https://dougblack.io/words/a-good-vimrc.html
+    "https://dougblack.io/words/a-good-vimrc.html
 
