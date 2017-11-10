@@ -12,3 +12,11 @@ mpd/.config/mpd/state
 mpd/.config/mpd/pid
 mpdscribble/
 fonts
+scripts/scripts/gawr.sh
+scripts/scripts/theNaziTree.sh
+scripts/scripts/packagealert.sh
+scripts/scripts/lion.sh
+scripts/scripts/automaton.sh
+scripts/scripts/testsize.sh
+scripts/scripts/SCRIPTORDERTEST.sh
+backgrounds/bgs/testingbg/
