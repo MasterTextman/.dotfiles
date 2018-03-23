@@ -16,7 +16,7 @@ set $mod Mod4
 font pango:Terminus 9
 
 # Command to execute a startup script.
-exec "/home/textman/scripts/ startupscript.sh"
+exec "/home/textman/scripts/startupscript.sh"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).

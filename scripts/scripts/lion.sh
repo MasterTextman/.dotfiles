@@ -1,2 +1,2 @@
 #!/bin/sh
-/home/textman/programFiles/clion-2017/bin/clion.sh
+/home/textman/programFiles/clion-2018/bin/clion.sh
