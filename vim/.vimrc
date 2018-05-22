@@ -5,9 +5,9 @@ syntax enable " enables syntax processing
 
 "ALL SET COMMANDS"
 "colorscheme redblack
-"colorscheme wal
+colorscheme wal
 "colorscheme molokai
-colorscheme gruvbox
+"colorscheme gruvbox
 set background=dark
 let g:filetype_pl="prolog"
 set foldnestmax=10 " guards against doing too much fold nesting
@@ -59,8 +59,8 @@ Plug 'w0rp/ale'
 ""  Plug 'roxma/nvim-yarp'
 ""  Plug 'roxma/vim-hug-neovim-rpc'
 "endif
-Plug 'Valloric/YouCompleteMe'
-Plug 'scrooloose/nerdtree'
+"Plug 'Valloric/YouCompleteMe'
+"Plug 'scrooloose/nerdtree'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Raimondi/delimitMate'

@@ -8,52 +8,55 @@
 ;=====================================================
 
 [colors]
-background = ${xrdb:color1}
-;background = #1E2129
+;background = ${xrdb:color0:#222}
+background = #222
 background-alt = #444
-foreground = ${xrdb:color7}
-;foreground = #ffffff
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:"LVDS-1"}
-width = 100%
-height = 25
-;offset-x = 1%
-;offset-y = 1%
-radius = 0.8
+;monitor = ${env:MONITOR:HDMI-1}
+width = 90%
+height = 30
+offset-x = 5%
+offset-y = 2%
+radius = 20.0
 fixed-center = true
 
-background = ${colors.background}
+;background = ${colors.background}
+background = #88551122
 foreground = ${colors.foreground}
 
-line-size = 4
+line-size = 3
 line-color = #f00
 
-border-size = 0
+border-left-size = 120
+border-top-size = 20
 border-color = #00000000
 
-padding-left = 1
-padding-right = 1
+padding-left = 5
+padding-right = 7
 
 module-margin-left = 1
-module-margin-right = 1
+module-margin-right = 2
 
-font-0 = terminus:pixelsize=10;1
+font-0 = Space Mono Nerd Font:pixelsize=9
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3 mpd
-modules-center = date
-modules-right = filesystem volume wlan memory cpu battery temperature 
+modules-center =  date
+;modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature powermenu
+modules-right = volume battery
 
-tray-position = left
-tray-padding = 0
-tray-transparent = true
-tray-background = ${colors.background}
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -65,6 +68,9 @@ tray-background = ${colors.background}
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
@@ -94,7 +100,7 @@ mount-0 = /
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = #ffffff
+label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
@@ -151,7 +157,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> <label-time>
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
 icon-prev = 
 icon-stop = 
@@ -159,13 +165,8 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-label-song-maxlen = 50
+label-song-maxlen = 25
 label-song-ellipsis = true
-
-#bar-progress-width = 20
-#bar-progress-indicator = █
-#bar-progress-fill = ─
-#bar-progress-empty = ∼
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -178,31 +179,31 @@ bar-indicator = |
 bar-indicator-foreground = #ff
 bar-indicator-font = 2
 bar-fill = ─
-bar-fill-font = 
-bar-fill-foreground = #ffffff
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${xrdb:color7}
+bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
 type = internal/backlight
-card = acpi_video0
+card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #ffffff
-format-underline = ${xrdb:color7}
-label = %percentage%%
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
+label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #ffffff
-format-underline = ${xrdb:color7}
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
@@ -211,7 +212,7 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = ${xrdb:color7}
+format-connected-underline = #9f78e1
 label-connected = %essid%
 
 format-disconnected =
@@ -225,12 +226,11 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-;ramp-signal-foreground = ${colors.foreground-alt}
-ramp-signal-foreground = #ffffff
+ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface = enp0s25
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -246,19 +246,17 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 5
 
-date = " %b %d/%y"
-date-alt = " %a, %b %d %Y,"
+date =
+date-alt = " %Y-%m-%d"
 
-;time = %H:%M
-;time-alt = %H:%M:%S
-time-alt = %H:%M
-time = %H:%M:%S
+time = %H:%M
+time-alt = %H:%M:%S
 
 format-prefix = 
-format-prefix-foreground = #ffffff
-format-underline = ${xrdb:color7}
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -270,7 +268,7 @@ label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
-format-muted-foreground = ${xrdb:color7}
+format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
 bar-volume-width = 10
@@ -288,7 +286,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${xrdb:color7}
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -297,47 +295,49 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffffff
+format-charging-underline = #ffb52a
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${xrdb:color7}
+format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${xrdb:color7}
+format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
-ramp-capacity-foreground = #ffffff
+ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
-animation-charging-foreground = #FFFFFF
+animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 70
+warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = ${xrdb:color7}
+format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
-format-warn-underline = #ffffff
+format-warn-underline = ${self.format-underline}
 
 label = %temperature%
 label-warn = %temperature%
-label-warn-foreground = ${xrdb:color5}
+label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = #ffffff
+ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
 type = custom/menu
+
+expand-right = true
 
 format-spacing = 1
 
@@ -372,6 +372,6 @@ screenchange-reload = true
 
 [global/wm]
 margin-top = 5
-margin-bottom = 0
+margin-bottom = 5
 
 ; vim:ft=dosini

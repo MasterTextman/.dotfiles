@@ -11,15 +11,18 @@ rofi.color-urgent: #000000, #dc322f, #202020, #dc322f, #fdf6e3
 rofi.modi: combi,run
 rofi.show: combi,run
 rofi.combi-modi:window,drun
-rofi.font: Terminess Powerline 9
+rofi.font: ProFont For Powerline:pixelsize=12
 
-urxvt*font:xft:terminus:pixelsize=12
-urxvt.boldFont:xft:terminusmod:pixelsize=12:style=Bold
+urxvt*font:xft:Space Mono Nerd Font:pixelsize=12:minspace=False, \
+           xft:Dejavu Sans Mono:pixelsize=18:minspace=False, \
+           -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+
 urxvt*scrollBar: false
 urxvt*borderless: 1
 urxvt*externalBorder: 0
-urxvt*internalBorder: 0
+urxvt*internalBorder: 25
 urxvt*fading: 10
+urxvt*letterSpace:1
 
 ! Due to i3
 ! Letting compton handle transparency

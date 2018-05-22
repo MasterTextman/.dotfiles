@@ -1,14 +1,21 @@
 #!/bin/bash
 cd ~/.dotfiles
 mv .bashrc .bashrcOLD
-sudo apt-get install stow
-sudo apt-get install python-pip
-sudo apt-get install fonts-powerline
-sudo apt-get install rxvt-unicode-256color
-sudo apt-get install thefuck
+mv .zshrc .zshrcOLD
+mv .oh-my-zsh .oh-my-zshOLD
+sudo apt-get -y install stow
+sudo apt-get -y install python-pip
+sudo apt-get -y install fonts-powerline
+sudo apt-get -y install rxvt-unicode-256color
+sudo apt-get -y install thefuck
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
-sudo apt-get install neovim
+sudo apt-get -y install neovim
+sudo apt-get -y install python3-pip
+sudo apt-get -y install zsh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 pip install powerline-shell
 stow bash && echo installed bash config
 stow calcurse && echo installed calcurse config
@@ -26,4 +33,5 @@ stow neofetch && echo installed neofetch config
 stow Xresources && echo installed Xresources
 stow scripts && echo installed scripts
 stow backgrounds && echo downloaded wallpapers
+stow zsh && echo installed zsh
 echo Done!
