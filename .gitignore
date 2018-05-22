@@ -13,5 +13,5 @@ mpd/.config/mpd/pid
 mpdscribble/
 fonts
 backgrounds/bgs/testingbg/
-.vim/autoload/
-.vim/plugged/
+vim/.vim/autoload/
+vim/.vim/plugged/
