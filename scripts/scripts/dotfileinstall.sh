@@ -13,6 +13,7 @@ sudo apt-get update
 sudo apt-get -y install neovim
 sudo apt-get -y install python3-pip
 sudo apt-get -y install zsh
+sudo apt-get -y install feh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

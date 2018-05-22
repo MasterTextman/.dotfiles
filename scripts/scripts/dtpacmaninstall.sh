@@ -13,6 +13,7 @@ sudo apt-get update
 pacman -S --noconfirm neovim
 pacman -S --noconfirm python3-pip
 pacman -S --noconfirm zsh
+pacman -S --noconfirm feh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
