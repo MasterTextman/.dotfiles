@@ -8,7 +8,7 @@ sudo apt-get -y install python-pip
 sudo apt-get -y install fonts-powerline
 sudo apt-get -y install rxvt-unicode-256color
 sudo apt-get -y install thefuck
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get -y install neovim
 sudo apt-get -y install python3-pip
@@ -29,6 +29,9 @@ stow powerline-shell && echo installed powerline-shell config
 stow tmux && echo installed tmux config
 stow vim && echo installed vim config
 stow nvim && echo downloaded nvim config
+rm -rf ~/.vim.old
+git clone https://github.com/flazz/vim-colorschemes.git ~/.vim.old
+cp -r ~/.vim.old/* ~/.vim/ && echo installed colorschemes
 stow neofetch && echo installed neofetch config
 stow Xresources && echo installed Xresources
 stow scripts && echo installed scripts
