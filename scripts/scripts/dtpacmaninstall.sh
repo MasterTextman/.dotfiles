@@ -3,16 +3,16 @@ cd ~/.dotfiles
 mv .bashrc .bashrcOLD
 mv .zshrc .zshrcOLD
 mv .oh-my-zsh .oh-my-zshOLD
-sudo apt-get -y install stow
-sudo apt-get -y install python-pip
-sudo apt-get -y install fonts-powerline
-sudo apt-get -y install rxvt-unicode-256color
-sudo apt-get -y install thefuck
+pacman -S --noconfirm stow
+pacman -S --noconfirm python-pip
+pacman -S --noconfirm fonts-powerline
+pacman -S --noconfirm rxvt-unicode-256color
+pacman -S --noconfirm thefuck
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt-get update
-sudo apt-get -y install neovim
-sudo apt-get -y install python3-pip
-sudo apt-get -y install zsh
+pacman -S --noconfirm neovim
+pacman -S --noconfirm python3-pip
+pacman -S --noconfirm zsh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

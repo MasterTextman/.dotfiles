@@ -2,12 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/textman/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bureau"
+(cat ~/.cache/wal/sequences &)
 
 (cat ~/.cache/wal/sequences &)
 export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/
