@@ -73,7 +73,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source ~/.fonts/*.sh
+# source ~/.fonts/*.sh
 
 # User configuration
 
