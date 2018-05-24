@@ -11,7 +11,7 @@
 ;background = ${xrdb:color0:#222}
 background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
+;foreground = ${xrdb:color0:#222}
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -20,26 +20,26 @@ alert = #bd2c40
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 90%
+width = 100%
 height = 30
 offset-x = 5%
 offset-y = 2%
-radius = 20.0
+radius = 0
 fixed-center = true
 
 ;background = ${colors.background}
-background = #88551122
+background = #55000000
 foreground = ${colors.foreground}
 
 line-size = 3
 line-color = #f00
 
-border-left-size = 120
-border-top-size = 20
-border-color = #00000000
+;border-left-size = 120
+;border-top-size = 20
+;border-color = #00000000
 
-padding-left = 5
-padding-right = 7
+padding-left = 15
+padding-right = 17
 
 module-margin-left = 1
 module-margin-right = 2
@@ -51,7 +51,7 @@ font-2 = Wuncon Siji:pixelsize=10;0
 modules-left = i3 mpd
 modules-center =  date
 ;modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature powermenu
-modules-right = volume battery
+modules-right = wlan volume battery
 
 tray-position = right
 tray-padding = 2

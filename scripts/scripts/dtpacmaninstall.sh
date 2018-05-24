@@ -1,12 +1,12 @@
 #!/bin/bash
 cd ~/.dotfiles
-mv .bashrc .bashrcOLD
-mv .zshrc .zshrcOLD
-mv .oh-my-zsh .oh-my-zshOLD
+mv ~/.bashrc .bashrcOLD
+mv ~/.zshrc .zshrcOLD
+mv ~/.oh-my-zsh .oh-my-zshOLD
 pacman -S --noconfirm stow
 pacman -S --noconfirm python-pip
-pacman -S --noconfirm fonts-powerline
-pacman -S --noconfirm rxvt-unicode-256color
+# pacman -S --noconfirm fonts-powerline
+# pacman -S --noconfirm rxvt-unicode-256color
 pacman -S --noconfirm thefuck
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt-get update
