@@ -54,7 +54,7 @@ modules-center =  date
 modules-right = wlan volume battery
 
 tray-position = right
-tray-padding = 2
+tray-padding = 8
 ;tray-transparent = true
 ;tray-background = #0063ff
 
@@ -246,7 +246,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date =
 date-alt = " %Y-%m-%d"
