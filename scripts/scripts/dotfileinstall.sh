@@ -20,13 +20,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 pip install powerline-shell
 pip3 install pywal
 stow bash && echo installed bash config
-stow calcurse && echo installed calcurse config
+# stow calcurse && echo installed calcurse config
 stow compton && echo installed compton config
-stow dunst && echo installed dunst config
-stow i3 && echo installed i3 config
-stow mpd && echo installed mpd config
-stow ncmpcpp && echo installed ncmpcpp config
-stow polybar && echo installed polybar config
+# stow dunst && echo installed dunst config
+# stow i3 && echo installed i3 config
+# stow mpd && echo installed mpd config
+# stow ncmpcpp && echo installed ncmpcpp config
+# stow polybar && echo installed polybar config
 stow powerline-shell && echo installed powerline-shell config
 stow tmux && echo installed tmux config
 stow vim && echo installed vim config
@@ -39,4 +39,10 @@ stow Xresources && echo installed Xresources
 stow scripts && echo installed scripts
 stow backgrounds && echo downloaded wallpapers
 stow zsh && echo installed zsh
+xrdb ~/.Xresources && echo loaded xresources
+chsh -s $(which zsh) && echo set zsh as default
+
+echo !Reminder!
+echo Run :PlugInstall in nvim to install all the plugins!
+
 echo Done!

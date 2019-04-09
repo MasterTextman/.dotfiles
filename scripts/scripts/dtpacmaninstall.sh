@@ -39,4 +39,8 @@ stow Xresources && echo installed Xresources
 stow scripts && echo installed scripts
 stow backgrounds && echo downloaded wallpapers
 stow zsh && echo installed zsh
+
+xrdb ~/.Xresources && echo loaded xresources
+chsh -s $(which zsh) && echo set zsh as default
+
 echo Done!

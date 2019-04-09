@@ -7,11 +7,11 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bureau"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 (cat ~/.cache/wal/sequences &)
 
 (cat ~/.cache/wal/sequences &)
-export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/
+export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/:${HOME}/.local/bin
 source ~/.bash_aliases
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -99,9 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
 
 eval $(thefuck --alias)

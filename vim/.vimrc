@@ -5,9 +5,9 @@ syntax enable " enables syntax processing
 
 "ALL SET COMMANDS"
 "colorscheme redblack
-colorscheme wal
+"colorscheme wal
 "colorscheme molokai
-"colorscheme gruvbox
+colorscheme gruvbox
 set background=dark
 let g:filetype_pl="prolog"
 set foldnestmax=10 " guards against doing too much fold nesting
@@ -106,7 +106,7 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_echo_cursor = 1
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
