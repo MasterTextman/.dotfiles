@@ -13,7 +13,7 @@ rofi.show: combi,run
 rofi.combi-modi:window,drun
 rofi.font: ProFont For Powerline:pixelsize=12
 
-urxvt*font:xft:Fira Code:pixelsize=12:minspace=False, \
+urxvt*font:xft:Source Code Pro for Powerline:pixelsize=14:minspace=False, \
 	   xft:Space Mono Nerd Font:pixelsize=12:minspace=False, \
            xft:Dejavu Sans Mono:pixelsize=18:minspace=False, \
            -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
@@ -24,6 +24,8 @@ urxvt*externalBorder: 0
 urxvt*internalBorder: 20
 urxvt*fading: 10
 urxvt*letterSpace:0
+urxvt*background: #151515
+urxvt*foreground: white
 
 ! Due to i3
 ! Letting compton handle transparency

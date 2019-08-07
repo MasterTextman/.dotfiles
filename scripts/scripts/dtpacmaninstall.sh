@@ -1,24 +1,26 @@
 #!/bin/bash
-cd ~/.dotfiles
-mv ~/.bashrc .bashrcOLD
-mv ~/.zshrc .zshrcOLD
-mv ~/.oh-my-zsh .oh-my-zshOLD
+cd /home/*/.dotfiles
+mv /home/*/.bashrc .bashrcOLD
+mv /home/*/.zshrc .zshrcOLD
+mv /home/*/.oh-my-zsh .oh-my-zshOLD
 pacman -S --noconfirm stow
 pacman -S --noconfirm python-pip
-# pacman -S --noconfirm fonts-powerline
-# pacman -S --noconfirm rxvt-unicode-256color
+pacman -S --noconfirm rxvt-unicode #-256color
 pacman -S --noconfirm thefuck
-sudo add-apt-repository -y ppa:neovim-ppa/stable
-sudo apt-get update
 pacman -S --noconfirm neovim
 pacman -S --noconfirm python3-pip
 pacman -S --noconfirm zsh
 pacman -S --noconfirm feh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-pip install powerline-shell
-pip3 install pywal
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#git clone https://aur.archlinux.org/yay.git
+#cd yay
+#makepkg -si
+#pip install powerline-shell
+#pip3 install pywal
+yay -S --noconfirm fonts-powerline
+cd /home/*/.dotfiles
 stow bash && echo installed bash config
 stow calcurse && echo installed calcurse config
 stow compton && echo installed compton config
