@@ -24,6 +24,8 @@ urxvt*externalBorder: 0
 urxvt*internalBorder: 20
 urxvt*fading: 10
 urxvt*letterSpace:0
+urxvt*background: #171717
+urxvt*foreground: white
 
 ! Due to i3
 ! Letting compton handle transparency
