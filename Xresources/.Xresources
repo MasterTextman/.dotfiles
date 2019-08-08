@@ -13,7 +13,7 @@ rofi.show: combi,run
 rofi.combi-modi:window,drun
 rofi.font: ProFont For Powerline:pixelsize=12
 
-urxvt*font:xft:Fira Code:pixelsize=12:minspace=False, \
+urxvt*font:xft:Fira Code Retina:pixelsize=14:minspace=False, \
 	   xft:Space Mono Nerd Font:pixelsize=12:minspace=False, \
            xft:Dejavu Sans Mono:pixelsize=18:minspace=False, \
            -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*

@@ -11,7 +11,10 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 (cat ~/.cache/wal/sequences &)
 
 (cat ~/.cache/wal/sequences &)
-export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/:${HOME}/.local/bin
+export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/:${HOME}/.local/bin:/usr/local/go/bin:${GOPATH}/bin
+
+export GOPATH=$(go env GOPATH)
+
 source ~/.bash_aliases
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
