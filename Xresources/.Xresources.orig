@@ -1,0 +1,40 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #000000, #00b1ff, #000000
+rofi.color-normal: #000000, #00cbff, #202020, #00789e, #eee8d5
+rofi.color-active: #000000, #ffa500, #202020, #966100, #fdf6e3
+rofi.color-urgent: #000000, #dc322f, #202020, #dc322f, #fdf6e3
+
+!rofi.modi: window,run,ssh,drun,combi
+rofi.modi: combi,run
+rofi.show: combi,run
+rofi.combi-modi:window,drun
+rofi.font: ProFont For Powerline:pixelsize=12
+
+<<<<<<< HEAD
+urxvt*font:xft:Fira Code Retina:pixelsize=14:minspace=False, \
+=======
+urxvt*font:xft:Source Code Pro for Powerline:pixelsize=14:minspace=False, \
+>>>>>>> 05eadfb1247d9152823596a64fec6d8b9c0365dc
+	   xft:Space Mono Nerd Font:pixelsize=12:minspace=False, \
+           xft:Dejavu Sans Mono:pixelsize=18:minspace=False, \
+           -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+
+urxvt*scrollBar: false
+urxvt*borderless: 1
+urxvt*externalBorder: 0
+urxvt*internalBorder: 20
+urxvt*fading: 10
+urxvt*letterSpace:0
+urxvt*background: #151515
+urxvt*foreground: white
+
+! Due to i3
+! Letting compton handle transparency
+urxvt.transparent: false
+urxvt.shading:0
+
+xterm*termName: xterm-256color
+
