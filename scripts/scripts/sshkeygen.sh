@@ -1,6 +1,9 @@
 #!/bin/bash
-cd ~
-cp .ssh/id_rsa .ssh/id_rsa`ls id_rsa* | wc -l`
-rm .ssh/id_rsa
-echo -e "\n\n\n" | ssh-keygen -t rsa
-cat .ssh/id_rsa.pub
+if  [ -f "$HOME/.ssh/id_rsa.pub" ]; then
+    echo "Key already exists."
+    cat ~/.ssh/id_rsa.pub
+else
+    echo "Key doesn't exist, creating..."
+    echo -e "\n\n\n" | ssh-keygen -t rsa
+    cat .ssh/id_rsa.pub
+fi
