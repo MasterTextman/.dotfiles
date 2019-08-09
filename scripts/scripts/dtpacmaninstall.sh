@@ -1,15 +1,18 @@
 #!/bin/bash
 
+# rewrite $HOME for root
+sudo bash -c "echo Defaults env_keep += "HOME" >> /etc/sudoers"
+
 # Goes into correct dir
 cd /home/*/.dotfiles
 
 # Backs up old config
 rm $HOME/.bashrcOLD
 rm $HOME/.zshrcOLD
-rm $HOME/.oh-my-zshOLD
+rm -rf $HOME/.oh-my-zshOLD
 mv $HOME/.bashrc $HOME/.bashrcOLD
 mv $HOME/.zshrc $HOME/.zshrcOLD
-sudo mv $HOME/.oh-my-zsh $HOME/.oh-my-zshOLD
+mv $HOME/.oh-my-zsh $HOME/.oh-my-zshOLD
 
 # Installing initial programs
 echo Installing initial programs with pacman...
@@ -32,32 +35,42 @@ sudo curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Installs oh-my-zsh
 echo Reinstalling oh-my-zsh...
 sleep 1
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL \
+#    https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" & disown
 
 # Installing yay AUR wrapper around pacman
 echo Installing yay...
 sleep 3
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd ..
 sudo rm -rf yay
 
 # Additional python progs
 echo Installing python programs
 sleep 3
-pip install powerline-shell
-pip3 install pywal
+sudo -H pip install powerline-shell
+sudo -H pip3 install pywal
 
 # yay installs
 echo Installing yay progs
 yay -S --noconfirm fonts-powerline
 
+# installing powerline fonts
+cd
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+
+# reset dir
 cd /home/*/.dotfiles
 
 # stowing - or setting up configurations
 echo Stowing configurations...
-pause 3
+sleep 3
 stow bash && echo installed bash config
 stow calcurse && echo installed calcurse config
 stow compton && echo installed compton config
