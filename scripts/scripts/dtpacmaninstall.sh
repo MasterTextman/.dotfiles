@@ -106,4 +106,4 @@ xrdb ~/.Xresources && echo loaded xresources
 chsh -s $(which zsh) && echo set zsh as default
 
 echo Done!
-echo Remember to run pacman -Syu if you've just installed the OS!
+echo Remember to run pacman -Syu if you\'ve just installed the OS!
