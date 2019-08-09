@@ -26,6 +26,14 @@ sudo pacman -S --noconfirm python3-pip
 sudo pacman -S --noconfirm zsh
 sudo pacman -S --noconfirm feh
 
+# Installs the powerlevel9k theme.
+# NOTE: In .zshrc, ZSH_THEME is commented out.
+# The reason for this is that there's a line at the end
+#	that sources the powerlevel9k theme.
+# If you want to change themes, comment said line,
+#	and uncomment the ZSH_THEME line.
+sudo pacman -S --noconfirm zsh-theme-powerlevel9k
+
 # Installs VimPlug
 echo Installing VimPlug...
 sleep 1
@@ -33,9 +41,10 @@ sudo curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Installs oh-my-zsh
-echo Reinstalling oh-my-zsh...
-sleep 1
-#sh -c "$(curl -fsSL \
+# Commented out as the files are stowed instead.
+# echo Reinstalling oh-my-zsh...
+# sleep 1
+# sh -c "$(curl -fsSL \
 #    https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" & disown
 
 # Installing yay AUR wrapper around pacman
