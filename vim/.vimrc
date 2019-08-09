@@ -42,16 +42,70 @@ command! -nargs=* T split | terminal <args>
 command! -nargs=* VT vsplit | terminal <args>
 
 "For automatic fold saving/loading
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+augroup AutoSaveFolds
+    autocmd!
+    autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
+    autocmd BufWinEnter ?* silent! loadview
+augroup END
+
+set viewoptions=folds,cursor
+set sessionoptions=folds
+
+"SYNTASTIC
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"TAGBAR
+let g:rust_use_custom_ctags_defs = 1  " if using rust.vim
+let g:tagbar_type_rust = {
+  \ 'ctagsbin' : '/usr/bin/ctags',
+  \ 'ctagstype' : 'rust',
+  \ 'kinds' : [
+      \ 'n:modules',
+      \ 's:structures:1',
+      \ 'i:interfaces',
+      \ 'c:implementations',
+      \ 'f:functions:1',
+      \ 'g:enumerations:1',
+      \ 't:type aliases:1:0',
+      \ 'v:constants:1:0',
+      \ 'M:macros:1',
+      \ 'm:fields:1:0',
+      \ 'e:enum variants:1:0',
+      \ 'P:methods:1',
+  \ ],
+  \ 'sro': '::',
+  \ 'kind2scope' : {
+      \ 'n': 'module',
+      \ 's': 'struct',
+      \ 'i': 'interface',
+      \ 'c': 'implementation',
+      \ 'f': 'function',
+      \ 'g': 'enum',
+      \ 't': 'typedef',
+      \ 'v': 'variable',
+      \ 'M': 'macro',
+      \ 'm': 'field',
+      \ 'e': 'enumerator',
+      \ 'P': 'method',
+  \ },
+\ }
 
 "VIM-PLUG"
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mkitt/tabline.vim'
-"Plug 'vim-syntastic/syntastic'
 Plug 'w0rp/ale'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'https://github.com/majutsushi/tagbar.git'
 "if has('nvim')
 ""  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "else
@@ -61,6 +115,8 @@ Plug 'w0rp/ale'
 "endif
 "Plug 'Valloric/YouCompleteMe'
 "Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Raimondi/delimitMate'
@@ -68,14 +124,27 @@ Plug 'easymotion/vim-easymotion'
 Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'sheerun/vim-polyglot'
 Plug 'adimit/prolog.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'mhinz/vim-startify'
 call plug#end()
+
+"Markdown"
+nmap <C-m> <Plug>MarkdownPreview
 
 "OTHER"
 let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 let g:rehash256 = 1
 set t_Co=256
+
+"TAGBAR"
+nmap <F8> :TagbarToggle<CR>
+
+"FZF
+map ; :Files<CR>
 
 "if has('nvim') || has('termguicolors')
 "    set termguicolors

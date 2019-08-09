@@ -106,3 +106,5 @@ source $ZSH/oh-my-zsh.sh
 #
 
 eval $(thefuck --alias)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
