@@ -70,7 +70,7 @@ yay --no-confirm -S otf-fira-code
 cd
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
-./install.sh
+sudo ./install.sh
 cd ..
 rm -rf fonts
 
