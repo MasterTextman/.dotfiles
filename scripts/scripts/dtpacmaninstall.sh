@@ -64,7 +64,7 @@ sudo -H pip3 install pywal
 
 # yay installs
 echo Installing yay progs
-yay -S --noconfirm fonts-powerline
+yay --no-confirm -S otf-fira-code
 
 # installing powerline fonts
 cd
