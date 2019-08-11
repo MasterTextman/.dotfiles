@@ -10,7 +10,8 @@ syntax enable " enables syntax processing
 colorscheme gruvbox
 set background=dark
 let g:filetype_pl="prolog"
-set foldnestmax=10 " guards against doing too much fold nesting
+set foldnestmax=3 " guards against doing too much fold nesting
+set foldmethod=indent
 set tabstop=4 " tab is 4 spaces
 set softtabstop=4 " while editing, tab counts as 4 spaces
 set shiftwidth=4
@@ -115,8 +116,10 @@ Plug 'https://github.com/majutsushi/tagbar.git'
 "endif
 "Plug 'Valloric/YouCompleteMe'
 "Plug 'scrooloose/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Raimondi/delimitMate'
@@ -130,6 +133,9 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'mhinz/vim-startify'
 call plug#end()
+
+"vim-align"
+nmap ga <Plug>(EasyAlign)
 
 "Markdown"
 nmap <C-m> <Plug>MarkdownPreview

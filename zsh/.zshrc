@@ -4,14 +4,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+(cat ~/.cache/wal/sequences &)
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="agnoster"
-(cat ~/.cache/wal/sequences &)
-
-(cat ~/.cache/wal/sequences &)
-export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/:${HOME}/.local/bin:/usr/local/go/bin:${GOPATH}/bin
+export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/:${HOME}/.local/bin:/usr/local/go/bin:${GOPATH}/bin
 
 export GOPATH=$(go env GOPATH)
 
