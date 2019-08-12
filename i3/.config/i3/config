@@ -16,7 +16,7 @@ set $mod Mod4
 font pango:SpaceMono Nerd Font 9
 
 # Command to execute a startup script.
-exec "/home/textman/scripts/startupscript.sh"
+exec "$HOME/scripts/startupscript.sh"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -37,7 +37,7 @@ gaps inner 10
 gaps outer 10
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec konsole
 # kill focused window
 bindsym $mod+q kill
 
@@ -64,10 +64,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -96,6 +96,9 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# locks the screen
+bindsym $mod+l exec --no-startup-id "i3lock -i \\"bgs/702seconds.png\\" -e -f"
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -105,7 +108,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # print screen - for selection
-bindsym --release Print exec "sh /home/textman/scripts/scrottake.sh"
+bindsym --release Print exec "sh $HOME/scripts/scrottake.sh"
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -214,14 +217,14 @@ mode "$mode_gaps_outer" {
 set_from_resource $fg i3wm.color7
 set_from_resource $bg 13wm.color2
 
-# class                   backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
+#class                   backgr. text indicator child_border
+#client.focused          $bg     $bg     $fg  $bg       $bg
+#client.focused_inactive $bg     $bg     $fg  $bg       $bg
+#client.unfocused        $bg     $bg     $fg  $bg       $bg
+#client.urgent           $bg     $bg     $fg  $bg       $bg
+#client.placeholder      $bg     $bg     $fg  $bg       $bg
 
-client.background       $bg
+#client.background       $bg
 
 new_window pixel 6
 

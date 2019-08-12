@@ -28,7 +28,7 @@ radius = 0
 fixed-center = true
 
 ;background = ${colors.background}
-background = #55000000
+background = #201040
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -44,14 +44,15 @@ padding-right = 17
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Space Mono Nerd Font:pixelsize=9
+font-0 = Fira Code Retina:pixelsize=9
+;font-0 = Space Mono Nerd Font:pixelsize=9
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Wuncon Siji:pixelsize=10;0
+font-2 = Siji:pixelsize=10;0
 
-modules-left = i3 mpd
+modules-left = i3
 modules-center =  date
 ;modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature powermenu
-modules-right = wlan volume battery
+modules-right = wlan volume memory filesystem cpu battery powermenu
 
 tray-position = right
 tray-padding = 8
@@ -208,7 +209,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlp1s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
