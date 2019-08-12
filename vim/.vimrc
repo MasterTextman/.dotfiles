@@ -10,7 +10,11 @@ syntax enable " enables syntax processing
 colorscheme gruvbox
 set background=dark
 let g:filetype_pl="prolog"
+let g:ycm_server_python_interpreter="/usr/bin/python3"
+let g:go_fmt_experimental=1
 set foldnestmax=10 " guards against doing too much fold nesting
+set foldmethod=indent
+set nofoldenable
 set tabstop=4 " tab is 4 spaces
 set softtabstop=4 " while editing, tab counts as 4 spaces
 set shiftwidth=4
@@ -35,6 +39,7 @@ nnoremap <A-Right> <C-w><Right>
 nnoremap <A-Left> <C-w><Left>
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+map ; :Files<CR>
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 tnoremap <Esc> <C-\><C-n>
@@ -42,14 +47,21 @@ command! -nargs=* T split | terminal <args>
 command! -nargs=* VT vsplit | terminal <args>
 
 "For automatic fold saving/loading
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+augroup remember_folds
+    autocmd!
+    autocmd BufWinLeave ?* mkview
+    autocmd BufWinEnter ?* silent! loadview
+augroup END 
 
 "VIM-PLUG"
 call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mkitt/tabline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'junegunn/fzf.vim'
 "Plug 'vim-syntastic/syntastic'
 Plug 'w0rp/ale'
 "if has('nvim')
