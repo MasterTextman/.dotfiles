@@ -6,16 +6,13 @@ export ZSH=~/.oh-my-zsh
 
 (cat ~/.cache/wal/sequences &)
 
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/:${HOME}/.local/bin:/usr/local/go/bin:${GOPATH}/bin:${HOME}/.cargo/bin
+# ZSH_THEME="agnoster"
+export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH:~/scripts:/home/linuxbrew/.linuxbrew/bin:/opt/lampp/bin/:${HOME}/.local/bin:/usr/local/go/bin:${GOPATH}/bin
 
 export GOPATH=$(go env GOPATH)
-
-export PATH=$PATH:${GOPATH}/bin
 
 source ~/.bash_aliases
 # Set list of themes to load
@@ -110,7 +107,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+<<<<<<< HEAD
 # eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+=======
+eval $(thefuck --alias)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+>>>>>>> c71ac0931e91453adba0a8fbc3dd8a2e763d71cf
