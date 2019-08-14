@@ -139,7 +139,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-"Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 "vim-align"
@@ -147,6 +147,7 @@ nmap ga <Plug>(EasyAlign)
 
 "Markdown"
 nmap <C-m> <Plug>MarkdownPreview
+let g:mkdp_browser = 'firefox'
 
 "OTHER"
 let g:airline_powerline_fonts = 1
