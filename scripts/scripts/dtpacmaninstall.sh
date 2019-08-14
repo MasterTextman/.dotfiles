@@ -65,6 +65,7 @@ sudo -H pip3 install pywal
 # yay installs
 echo Installing yay progs
 yay --no-confirm -S otf-fira-code
+yay --no-confirm -S xorg-xbacklight
 
 # installing powerline fonts
 cd

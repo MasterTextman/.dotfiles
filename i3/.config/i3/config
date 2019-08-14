@@ -54,6 +54,10 @@ bindsym XF86AudioPlay exec --no-startup-id "mpc toggle"
 bindsym XF86AudioPrev exec --no-startup-id "mpc prev"
 bindsym XF86AudioStop exec --no-startup-id "mpc stop"
 
+# brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
+
 #lockscreen control
 #bindsym XF86Sleep exec --no-startup-id "i3lock -i \\"bgs/702seconds.png\\" -e -f && suspend"
 bindsym XF86ScreenSaver exec --no-startup-id "i3lock -i \\"bgs/702seconds.png\\" -e -f"

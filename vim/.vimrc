@@ -130,6 +130,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Raimondi/delimitMate'
+Plug 'lervag/vimtex'
 Plug 'easymotion/vim-easymotion'
 Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'sheerun/vim-polyglot'
@@ -139,6 +140,10 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc-after'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'fmoralesc/vim-pad'
+Plug 'SidOfc/mkdx'
 Plug 'mhinz/vim-startify'
 call plug#end()
 
@@ -149,9 +154,22 @@ nmap ga <Plug>(EasyAlign)
 nmap <C-m> <Plug>MarkdownPreview
 let g:mkdp_browser = 'firefox'
 
+"vim-pad"
+let g:pad#dir = "~/Documents/notes"
+let g:pad#local_dir = "notes"
+let g:pad#default_format = "pandoc"
+
+"pandoc"
+let g:pandoc#formatting#mode = "hA"
+let g:pandoc#smart_autoformat_on_cursormoved = 1
+let g:pandoc#after#modules#enabled = ["tablemode"]
+
+"mkdx"
+let g:mkdx#settings = { 'map': { 'prefix': ',' } }
+
 "OTHER"
 let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
+let g:airline_theme='molokai'
 let g:rehash256 = 1
 set t_Co=256
 
@@ -199,8 +217,4 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 set clipboard+=unnamedplus
-
-"This is all for now, as I am a beginner.
-"To see the rest, more advanced stuff, check this:
-    "https://dougblack.io/words/a-good-vimrc.html
 
